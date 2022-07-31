@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220731 12:56:27.234" rpa="false" schemaversion="3">
+<suite id="s1" name="Testcase" source="C:\Users\Administrator\Documents\MobileAppRF\Rupeek\Test\Testcase.robot">
+<test id="s1-t1" name="Check whether user can select a city" line="7">
+<kw name="Open the rupeek application" library="Instruction">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://127.0.0.1:4723/wd/hub</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220731 12:56:27.460" endtime="20220731 12:56:37.037"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>id=${button_2}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220731 12:56:37.037" endtime="20220731 12:56:39.642"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=${button_2}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220731 12:56:39.653" level="INFO">Clicking element 'id=com.rupeek.customer:id/gravityButtonContainerTextDrawable'.</msg>
+<status status="PASS" starttime="20220731 12:56:39.642" endtime="20220731 12:56:39.777"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>id=com.google.android.gms:id/credential_primary_label</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220731 12:56:39.777" endtime="20220731 12:56:41.011"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.google.android.gms:id/credential_primary_label</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220731 12:56:41.018" level="INFO">Clicking element 'id=com.google.android.gms:id/credential_primary_label'.</msg>
+<status status="PASS" starttime="20220731 12:56:41.012" endtime="20220731 12:56:42.692"/>
+</kw>
+<status status="PASS" starttime="20220731 12:56:27.460" endtime="20220731 12:56:42.693"/>
+</kw>
+<kw name="Select the city" library="Instruction">
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220731 12:56:52.700" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220731 12:56:42.696" endtime="20220731 12:56:52.700"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=${button_3}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220731 12:56:52.710" level="INFO">Clicking element 'id=com.rupeek.customer:id/change_location'.</msg>
+<status status="PASS" starttime="20220731 12:56:52.701" endtime="20220731 12:56:52.892"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220731 12:56:55.913" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220731 12:56:52.893" endtime="20220731 12:56:55.913"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${TEXT_1}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220731 12:56:55.914" endtime="20220731 12:56:56.893"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220731 12:56:59.898" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220731 12:56:56.894" endtime="20220731 12:56:59.898"/>
+</kw>
+<status status="PASS" starttime="20220731 12:56:42.695" endtime="20220731 12:56:59.899"/>
+</kw>
+<status status="PASS" starttime="20220731 12:56:27.459" endtime="20220731 12:56:59.909"/>
+</test>
+<status status="PASS" starttime="20220731 12:56:27.236" endtime="20220731 12:56:59.916"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testcase">Testcase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
